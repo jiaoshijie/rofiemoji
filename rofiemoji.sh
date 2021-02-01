@@ -15,6 +15,7 @@ if [ "$@" ]
 then
   smiley=$(echo $@ | cut -d' ' -f1)
   echo -n "$smiley" | xsel -bi
+  notify-send "'$smiley' copied to clipboard." &
   exit 0
 fi
 
